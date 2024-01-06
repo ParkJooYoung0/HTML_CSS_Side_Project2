@@ -4,8 +4,65 @@
         <meta http-equiv="X-UA-Compatible" conten="Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1,0">
         <title>카카오뱅크</title>
+        <style>
+            header {
+                display: flex;
+                position: relative;
+                height: 70px;
+                padding: 0 180px;
+                border: 1px solid black;
+            }
+            header > a > img:first-of-type { 
+                position: absolute;
+                padding-top: 22px;
+            }
+            li { 
+                list-style: none;
+                display: inline;
+            }
+        </style>
     </head>
     <body>
-
+        <div class="wrap">
+            <header>
+                    <a href="https://www.kakaobank.com/">
+                        <img src="https://www.kakaobank.com/static/images/web/logo_black.svg" class="header-logo">
+                    </a>
+                <nav>
+                    <ul>
+                        <li><a href="#">은행소개</a></li>
+                        <li><a href="#">IR투자정보</a></li>
+                        <li><a href="#">상품안내</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">서류제출하기</a></li>
+                        <li> <a href="#" class="header-lang"> <img src="https://www.kakaobank.com/static/images/web/icon_eng.svg"></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="main-page1">
+                    <h1>이미 모두의 은행<br>지금은 카카오뱅크</h1>
+                    <p>한 사람, 한 사람을 위해 시작한 은행이<br>
+                        더 많은 사람들이 찾는 모두의 은행이 되었습니다.<br><br>
+                        보내고, 받고, 모으고, 쓰는<br>
+                        당신의 모든 일이 바뀌고 있습니다.</p>
+                    <div id="gooleplay-icon"></div>
+                    <div id="appstore-icon"></div>
+                </div>
+                <div class="main-page2">
+                    <div class="main-page2-left"></div>
+                    <div class="main-page2-right">
+                        <h1></h1>
+                        <p></p>
+                        <div class="main-page2-button"></div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div></div>
+                <div></div>
+                <div></div>
+            </footer>
+        </div>
     </body>
 </html>
