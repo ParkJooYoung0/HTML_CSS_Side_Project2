@@ -5,11 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1,0">
         <title>카카오뱅크</title>
         <style>
+            html, body {
+                margin:0;
+                padding: 0;
+            }
             header {
                 display: flex;
                 position: relative;
                 height: 70px;
-                border-bottom: 1px solid gray;
+                border-bottom: 1px solid lightgray;
             }
             header > a > img:first-of-type { 
                 position: absolute;
@@ -41,9 +45,42 @@
                 border-radius: 50px;
             }
             .main-page1 {
-                height: 100vh;
+                position: relative;
+                height: 103vh;
                 background: url(./main-first-page-bg.png) no-repeat center;
                 background-size: cover;
+            }
+            #headline {
+                position: absolute;
+                top: 135px;
+                left: 215px;
+                font-size: 3.2rem;
+                font-weight: bold;
+                margin: 0;  
+            }
+            .text {
+                position: absolute;
+                top: 280px;
+                left: 215px;
+                line-height: 30px;
+                font-size: 1.1em;
+                margin: 0;
+            }
+            .Appicon {
+                position: absolute;
+                width: 180px;
+                height: 60px;
+                background-color: white;
+                border: none;
+                border-radius: 15px;
+            }
+            #google {
+                top: 474px;
+                left: 215px;
+            }
+            #apple {
+                top: 474px;
+                left: 410px;
             }
         </style>
     </head>
@@ -66,13 +103,13 @@
             </header>
             <main>
                 <div class="main-page1">
-                    <h1>이미 모두의 은행<br>지금은 카카오뱅크</h1>
-                    <p>한 사람, 한 사람을 위해 시작한 은행이<br>
+                    <p id="headline">이미 모두의 은행<br>지금은 카카오뱅크</p>
+                    <p class="text">한 사람, 한 사람을 위해 시작한 은행이<br>
                         더 많은 사람들이 찾는 모두의 은행이 되었습니다.<br><br>
                         보내고, 받고, 모으고, 쓰는<br>
                         당신의 모든 일이 바뀌고 있습니다.</p>
-                    <div id="gooleplay-icon"></div>
-                    <div id="appstore-icon"></div>
+                    <div class="Appicon" id="google">Google Play</div>
+                    <div class="Appicon" id="apple">App Store</div>
                 </div>
                 <div class="main-page2">
                     <div class="main-page2-left"></div>
