@@ -30,6 +30,9 @@
                 color: black;
                 text-decoration: none;
             }
+            ul :visited {
+                color: black; 
+            }
             li { 
                 list-style: none;
                 display: inline-block;
@@ -41,7 +44,7 @@
             li:nth-child(5) {
                 height: 50px;
                 border: none;
-                background-color: rgb(255, 187, 0);
+                background-color: rgb(255, 218, 0);
                 border-radius: 50px;
             }
             .main-page1 {
@@ -50,11 +53,13 @@
                 background: url(./main-first-page-bg.png) no-repeat center;
                 background-size: cover;
             }
-            #headline {
-                position: absolute;
+            #headline1 {
                 top: 135px;
                 left: 215px;
                 font-size: 3.2rem;
+            }
+            .headline {
+                position: absolute;
                 font-weight: bold;
                 margin: 0;  
             }
@@ -73,6 +78,15 @@
                 background-color: white;
                 border: none;
                 border-radius: 15px;
+                text-align: center;
+                justify-content: center;
+            }
+            .Appicon:link {
+                color: black;
+                text-decoration: none;
+            }
+            .Appicon:visited { 
+                color: black;
             }
             #google {
                 top: 474px;
@@ -81,6 +95,11 @@
             #apple {
                 top: 474px;
                 left: 410px;
+            }
+            #headline2 {
+                top: 1220px;
+                left: 630px;
+                font-size: 2.5em;
             }
         </style>
     </head>
@@ -103,19 +122,20 @@
             </header>
             <main>
                 <div class="main-page1">
-                    <p id="headline">이미 모두의 은행<br>지금은 카카오뱅크</p>
+                    <p class="headline" id="headline1">이미 모두의 은행<br>지금은 카카오뱅크</p>
                     <p class="text">한 사람, 한 사람을 위해 시작한 은행이<br>
                         더 많은 사람들이 찾는 모두의 은행이 되었습니다.<br><br>
                         보내고, 받고, 모으고, 쓰는<br>
                         당신의 모든 일이 바뀌고 있습니다.</p>
-                    <div class="Appicon" id="google">Google Play</div>
-                    <div class="Appicon" id="apple">App Store</div>
+                    <a href=# class="Appicon" id="google">Google Play</a>
+                    <a href=# class="Appicon" id="apple">App Store</a>
                 </div>
                 <div class="main-page2">
                     <div class="main-page2-left"></div>
                     <div class="main-page2-right">
-                        <h1></h1>
-                        <p></p>
+                        <p class="headline" id="headline2">모바일로 더 손쉬운<br>계좌개설, 간편한 이체</p>
+                        <p>인증서, OTP 없이 계좌 개설이 간편합니다.<br>
+                            여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.</p>
                         <div class="main-page2-button"></div>
                     </div>
                 </div>
