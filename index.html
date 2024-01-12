@@ -63,23 +63,32 @@
                 font-weight: bold;
                 margin: 0;  
             }
-            .text {
+            .text1, .text2 {
                 position: absolute;
-                top: 280px;
-                left: 215px;
                 line-height: 30px;
                 font-size: 1.1em;
                 margin: 0;
             }
-            .Appicon {
+            .text1 {
+                top: 280px;
+                left: 215px;
+            }
+            #google, #apple {
                 position: absolute;
                 width: 180px;
                 height: 60px;
                 background-color: white;
-                border: none;
                 border-radius: 15px;
                 text-align: center;
-                justify-content: center;
+                line-height: 60px;
+            }
+            #google {
+                top: 474px;
+                left: 215px;
+            }
+            #apple { 
+                top: 474px;
+                left: 410px;
             }
             .Appicon:link {
                 color: black;
@@ -88,19 +97,37 @@
             .Appicon:visited { 
                 color: black;
             }
-            #google {
-                top: 474px;
-                left: 215px;
-            }
-            #apple {
-                top: 474px;
-                left: 410px;
+            .main-page2 {
+                height: 860.05px;
             }
             #headline2 {
                 top: 1220px;
-                left: 630px;
+                right: 270px;
                 font-size: 2.5em;
             }
+            .text2 {
+                top: 1340px;
+                right: 218px;
+             }
+             #main-page2-buttonbox { 
+                position: absolute;
+                width: 276px;
+                height: 51px;
+                top: 1440px;
+                right: 338px;
+                border-radius: 9px;
+                background-color: rgb(241, 241, 241);
+                text-align: center;
+                line-height: 51px;
+             }
+             #main-page2-button:visited {
+                text-decoration: none;
+                color: black;
+             }
+             #main-page2-button:link {
+                text-decoration: none;
+                color: black;
+             }
         </style>
     </head>
     <body>
@@ -123,20 +150,20 @@
             <main>
                 <div class="main-page1">
                     <p class="headline" id="headline1">이미 모두의 은행<br>지금은 카카오뱅크</p>
-                    <p class="text">한 사람, 한 사람을 위해 시작한 은행이<br>
+                    <p class="text1">한 사람, 한 사람을 위해 시작한 은행이<br>
                         더 많은 사람들이 찾는 모두의 은행이 되었습니다.<br><br>
                         보내고, 받고, 모으고, 쓰는<br>
                         당신의 모든 일이 바뀌고 있습니다.</p>
-                    <a href=# class="Appicon" id="google">Google Play</a>
-                    <a href=# class="Appicon" id="apple">App Store</a>
+                    <div id="google"><a href=# class="Appicon">Google Play</a></div>
+                    <div id="apple"><a href=# class="Appicon">App Store</a></div>
                 </div>
                 <div class="main-page2">
                     <div class="main-page2-left"></div>
                     <div class="main-page2-right">
                         <p class="headline" id="headline2">모바일로 더 손쉬운<br>계좌개설, 간편한 이체</p>
-                        <p>인증서, OTP 없이 계좌 개설이 간편합니다.<br>
+                        <p class="text2">인증서, OTP 없이 계좌 개설이 간편합니다.<br>
                             여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.</p>
-                        <div class="main-page2-button"></div>
+                            <div id="main-page2-buttonbox"><a href="#" id="main-page2-button"> 카카오뱅크 입출금통장</a></div>
                     </div>
                 </div>
             </main>
