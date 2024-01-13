@@ -41,11 +41,14 @@
                 margin-left: 30px;
                 padding: 0 5px;
             }
-            li:nth-child(5) {
-                height: 50px;
+            #list5{
+                width: 130px;
+                height: 48px;
                 border: none;
-                background-color: rgb(255, 218, 0);
-                border-radius: 50px;
+                background-color: rgb(255, 222, 37);
+                border-radius: 40px;
+                line-height: 48px;
+                text-align: center;
             }
             .main-page1 {
                 position: relative;
@@ -81,6 +84,12 @@
                 border-radius: 15px;
                 text-align: center;
                 line-height: 60px;
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+            .icon {
+                width: 20px;
+                height: 20px;
             }
             #google {
                 top: 474px;
@@ -99,6 +108,17 @@
             }
             .main-page2 {
                 height: 860.05px;
+            }
+            .main-page2-left {
+                position: absolute;
+                width:473px;
+                height: 680px;
+                top: 1030px;
+                left: 200px;
+            }
+            .main-page2-left-img {
+                width:100%;
+                height: 100%;
             }
             #headline2 {
                 top: 1220px;
@@ -128,6 +148,10 @@
                 text-decoration: none;
                 color: black;
              }
+             #main-page2-button-img {
+                width: 6px;
+                height: 9px;
+             }
         </style>
     </head>
     <body>
@@ -142,8 +166,8 @@
                         <li><a href="#">IR투자정보</a></li>
                         <li><a href="#">상품안내</a></li>
                         <li><a href="#">고객센터</a></li>
-                        <li><a href="#">서류제출하기</a></li>
-                        <li> <a href="#" class="header-lang"> <img src="https://www.kakaobank.com/static/images/web/icon_eng.svg"></a></li>
+                        <li><div id="list5"><a href="#">서류제출하기</a></div></li>
+                        <li><a href="#" id="header-lang"><img src="https://www.kakaobank.com/static/images/web/icon_eng.svg"></a></li>
                     </ul>
                 </nav>
             </header>
@@ -154,16 +178,25 @@
                         더 많은 사람들이 찾는 모두의 은행이 되었습니다.<br><br>
                         보내고, 받고, 모으고, 쓰는<br>
                         당신의 모든 일이 바뀌고 있습니다.</p>
-                    <div id="google"><a href=# class="Appicon">Google Play</a></div>
-                    <div id="apple"><a href=# class="Appicon">App Store</a></div>
+                    <div id="google">
+                        <img class="icon" src="./google_play.png">
+                        <a href=# class="Appicon">Google Play</a>
+                    </div>
+                    <div id="apple">
+                        <img class="icon" src="./social_apple.png">
+                        <a href=# class="Appicon">App Store</a>
+                    </div>
                 </div>
                 <div class="main-page2">
-                    <div class="main-page2-left"></div>
+                    <div class="main-page2-left"><img class="main-page2-left-img" src="https://www.kakaobank.com/static/images/web/renewal/main-withdrawal.png"></div>
                     <div class="main-page2-right">
                         <p class="headline" id="headline2">모바일로 더 손쉬운<br>계좌개설, 간편한 이체</p>
                         <p class="text2">인증서, OTP 없이 계좌 개설이 간편합니다.<br>
                             여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.</p>
-                            <div id="main-page2-buttonbox"><a href="#" id="main-page2-button"> 카카오뱅크 입출금통장</a></div>
+                            <div id="main-page2-buttonbox">
+                                <a href="#" id="main-page2-button"> 카카오뱅크 입출금통장</a>
+                                <img id="main-page2-button-img" src="https://www.kakaobank.com/static/images/web/home_arr.png">
+                            </div>
                     </div>
                 </div>
             </main>
