@@ -12,19 +12,20 @@
             header {
                 display: flex;
                 position: relative;
-                height: 70px;
+                height: 80px;
                 border-bottom: 1px solid lightgray;
             }
             header > a > img:first-of-type { 
                 position: absolute;
-                top: 22px;
+                top: 28px;
                 left: 180px;
             }
             ul { 
                 position: absolute;
+                display: flex;
                 right: 200px;
                 align-items: center;
-                text-align: center;
+                justify-content: center;
             }
             ul :link {
                 color: black;
@@ -42,8 +43,8 @@
                 padding: 0 5px;
             }
             #list5{
-                width: 130px;
-                height: 48px;
+                width: 122px;
+                height: 47px;
                 border: none;
                 background-color: rgb(255, 222, 37);
                 border-radius: 40px;
@@ -52,9 +53,11 @@
             }
             .main-page1 {
                 position: relative;
-                height: 103vh;
+                height: 110vh;
                 background: url(./main-first-page-bg.png) no-repeat center;
-                background-size: cover;
+                background-color: rgb(255, 237, 120);
+                background-size: contain;
+                background-position: 140px 20px;
             }
             #headline1 {
                 top: 135px;
@@ -78,18 +81,20 @@
             }
             #google, #apple {
                 position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 180px;
                 height: 60px;
                 background-color: white;
                 border-radius: 15px;
-                text-align: center;
-                line-height: 60px;
                 font-weight: 600;
                 font-size: 1.1rem;
             }
             .icon {
-                width: 20px;
-                height: 20px;
+                width: 23px;
+                height: 23px;
+                margin-right: 10px;
             }
             #google {
                 top: 474px;
@@ -151,7 +156,77 @@
              #main-page2-button-img {
                 width: 6px;
                 height: 9px;
+                margin-left: 5px;
+                margin-bottom: 2px;
              }
+             footer { 
+                width: 1083px;
+                height: 230px;
+                padding: 20px 150px;
+                background-color: rgb(241, 241, 241);
+             }
+             #footer-menu {
+                display: flex;
+                flex-wrap: wrap;
+                line-height: 30px;
+                margin-right: 10px;
+             }
+             #call-number {
+                color: black;
+                padding: 0 10px;
+             }
+             #footer-informaion-box {
+                margin: 10px 0;
+             }
+             #footer-information {
+                display: flex;
+                font-size: 0.85rem;
+                color: gray;
+                margin-bottom: 10px;
+             }
+             #Copyright {
+                font-size: 0.85rem;
+                color: gray;
+                margin: 0;
+             }
+             .footer-link:visited {
+                color: black;
+                text-decoration: none;
+             }
+            .footer-link:link {
+                color: black;
+                text-decoration: none;
+             }
+             #footer-link-box1, #footer-link-box2 {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 50x;
+                line-height: 50px;
+             }
+             #footer-link-box1 { 
+                left: 140px;
+             }
+             #footer-link-box2 {
+                left: 320px;
+             }
+            .footer-link-img1 {
+                width: 50px;
+                height: 30px;
+                padding-right: 10px;
+            }
+            .footer-link-img2 {
+                width: 40px;
+                height: 40px;
+                padding-right: 10px;
+            }
+            #footer-link-box1 > a, #footer-link-box2 > a {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: gray;
+            }
         </style>
     </head>
     <body>
@@ -201,9 +276,47 @@
                 </div>
             </main>
             <footer>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div id="footer-menu">
+                    <div>모바일뱅킹 서비스 이용약관</div>
+                    <div>전자금융거래 기본약관</div>
+                    <div>위치기반 서비스 이용약관</div>
+                    <div>개인정보처리방침</div>
+                    <div>전자민원접수</div>
+                    <div>보호금융상품등록부</div>
+                    <div>상품공시실</div>
+                    <div>경영공시</div>
+                    <div>공지사항</div> 
+                    <br>
+                    <div>전자서명인증업무준칙</div>
+                    <div>카카오뱅크 인증서 서비스 이용약관</div>
+                    <div>카카오뱅크 인증서 서비스 개인정보처리방침</div>
+                </div>
+                <div id="footer-informaion-box">
+                    <div id="footer-information">
+                        <div>(주)카카오뱅크∙윤호영∙사업자번호 375-88-00197</div>
+                        <div id="call-number">대표전화 1599-3333</div>
+                        <div>(해외 +82-2-6420-3333)</div>
+                    </div>
+                    <div id="Copyright">
+                        <div>Copyright © KakaoBank Corp. All rights reserved.</div>
+                    </div>
+                </div>
+                    <div>
+                        <div id="footer-link-box1">
+                            <img class="footer-link-img1" src="https://www.kakaobank.com/static/images/web/footer/webaccessibility.png">
+                            <a class="footer-link" href="#">웹 접근성 품질인증</a>
+                        </div>
+                        <div id="footer-link-box2">
+                            <img class="footer-link-img2" src="https://www.kakaobank.com/static/images/web/footer/web_trust_seal.png">
+                            <a class="footer-link" href="#">웹 트러스트 인증</a>
+                    </div>
+                    <div>
+                        <img>
+                        <img>
+                        <img>
+                        <img>
+                    </div>
+                </div>
             </footer>
         </div>
     </body>
