@@ -162,14 +162,27 @@
              footer { 
                 width: 1083px;
                 height: 230px;
-                padding: 20px 150px;
+                padding: 20px 200px;
                 background-color: rgb(241, 241, 241);
              }
-             #footer-menu {
+             .footer-first-line :link, .footer-second-line :link {
+                text-decoration: none;
+                color: gray;
+             }
+             .footer-first-line :visited, .footer-second-line :visited {
+                text-decoration: none;
+                color: gray;
+             }
+             .footer-first-line, .footer-second-line {
                 display: flex;
                 flex-wrap: wrap;
                 line-height: 30px;
                 margin-right: 10px;
+                font-size: 0.9rem;
+                color: gray;
+             }
+             .footer-first-line > a:nth-of-type(n+2), .footer-second-line > a:nth-of-type(n+2) {
+                padding-left: 20px;
              }
              #call-number {
                 color: black;
@@ -189,6 +202,12 @@
                 color: gray;
                 margin: 0;
              }
+             #footer-icons {
+                display: flex;
+                align-items: center;
+                width: 1083px;
+                height: 45px;
+             }
              .footer-link:visited {
                 color: black;
                 text-decoration: none;
@@ -207,10 +226,10 @@
                 line-height: 50px;
              }
              #footer-link-box1 { 
-                left: 140px;
+                left: 185px;
              }
              #footer-link-box2 {
-                left: 320px;
+                left: 370px;
              }
             .footer-link-img1 {
                 width: 50px;
@@ -226,6 +245,16 @@
                 font-size: 0.9rem;
                 font-weight: 600;
                 color: gray;
+            }
+            .icons {
+                position: absolute;
+                display: flex;
+                right: 300px;
+            }
+            #FB, #instagram, #youtube {
+                width: 20px;
+                height: 20px;
+                padding-left: 10px;
             }
         </style>
     </head>
@@ -277,19 +306,22 @@
             </main>
             <footer>
                 <div id="footer-menu">
-                    <div>모바일뱅킹 서비스 이용약관</div>
-                    <div>전자금융거래 기본약관</div>
-                    <div>위치기반 서비스 이용약관</div>
-                    <div>개인정보처리방침</div>
-                    <div>전자민원접수</div>
-                    <div>보호금융상품등록부</div>
-                    <div>상품공시실</div>
-                    <div>경영공시</div>
-                    <div>공지사항</div> 
-                    <br>
-                    <div>전자서명인증업무준칙</div>
-                    <div>카카오뱅크 인증서 서비스 이용약관</div>
-                    <div>카카오뱅크 인증서 서비스 개인정보처리방침</div>
+                    <div class=footer-first-line>
+                        <a href="#" id="first-line1">모바일뱅킹 서비스 이용약관</a>
+                        <a href="#" id="first-line2">전자금융거래 기본약관</a>
+                        <a href="#" id="first-line3">위치기반 서비스 이용약관</a>
+                        <a href="#" id="first-line4">개인정보처리방침</a>
+                        <a href="#" id="first-line5">전자민원접수</a>
+                        <a href="#" id="first-line6">보호금융상품등록부</a>
+                        <a href="#" id="first-line7">상품공시실</a>
+                        <a href="#" id="first-line8">경영공시</a>
+                        <a href="#" id="first-line9">공지사항</a> 
+                    </div>
+                    <div class=footer-second-line>
+                        <a href="#" id="first-line1">전자서명인증업무준칙</a>
+                        <a href="#">카카오뱅크 인증서 서비스 이용약관</a>
+                        <a href="#">카카오뱅크 인증서 서비스 개인정보처리방침</a>
+                    </div>
                 </div>
                 <div id="footer-informaion-box">
                     <div id="footer-information">
@@ -301,7 +333,7 @@
                         <div>Copyright © KakaoBank Corp. All rights reserved.</div>
                     </div>
                 </div>
-                    <div>
+                    <div id="footer-icons">
                         <div id="footer-link-box1">
                             <img class="footer-link-img1" src="https://www.kakaobank.com/static/images/web/footer/webaccessibility.png">
                             <a class="footer-link" href="#">웹 접근성 품질인증</a>
@@ -309,12 +341,11 @@
                         <div id="footer-link-box2">
                             <img class="footer-link-img2" src="https://www.kakaobank.com/static/images/web/footer/web_trust_seal.png">
                             <a class="footer-link" href="#">웹 트러스트 인증</a>
-                    </div>
-                    <div>
-                        <img>
-                        <img>
-                        <img>
-                        <img>
+                        </div>
+                    <div class="icons">
+                        <img  id="FB" src="./FB_png.png">
+                        <img id="instagram" src="./INSTAGRAM_png.png">
+                        <img id="youtube" src="./YOUTUBE_png.png">
                     </div>
                 </div>
             </footer>
