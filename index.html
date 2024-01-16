@@ -34,6 +34,9 @@
             ul :visited {
                 color: black; 
             }
+            ul,#footer-menu :hover {
+                text-decoration: underline;
+            }
             li { 
                 list-style: none;
                 display: inline-block;
@@ -161,7 +164,7 @@
              }
              footer { 
                 width: 1083px;
-                height: 230px;
+                height: 165px;
                 padding: 20px 200px;
                 background-color: rgb(241, 241, 241);
              }
@@ -178,11 +181,22 @@
                 flex-wrap: wrap;
                 line-height: 30px;
                 margin-right: 10px;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
                 color: gray;
              }
-             .footer-first-line > a:nth-of-type(n+2), .footer-second-line > a:nth-of-type(n+2) {
-                padding-left: 20px;
+             .footer-first-line > a:nth-of-type(n+2)::before, .footer-second-line > a:nth-of-type(n+2)::before {
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 10px;
+                background-color: lightgray;
+                margin: 0 12px;
+             }
+             .footer-first-line > a:nth-of-type(3), .footer-first-line > a:nth-of-type(4), .footer-first-line > a:nth-of-type(5) {
+                color: black;
+             }
+             .footer-second-line > a:nth-of-type(3) {
+                color: black;
              }
              #call-number {
                 color: black;
@@ -307,15 +321,15 @@
             <footer>
                 <div id="footer-menu">
                     <div class=footer-first-line>
-                        <a href="#" id="first-line1">모바일뱅킹 서비스 이용약관</a>
-                        <a href="#" id="first-line2">전자금융거래 기본약관</a>
-                        <a href="#" id="first-line3">위치기반 서비스 이용약관</a>
-                        <a href="#" id="first-line4">개인정보처리방침</a>
-                        <a href="#" id="first-line5">전자민원접수</a>
-                        <a href="#" id="first-line6">보호금융상품등록부</a>
-                        <a href="#" id="first-line7">상품공시실</a>
-                        <a href="#" id="first-line8">경영공시</a>
-                        <a href="#" id="first-line9">공지사항</a> 
+                        <a href="#">모바일뱅킹 서비스 이용약관</a>
+                        <a href="#">전자금융거래 기본약관</a>
+                        <a href="#">위치기반 서비스 이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">전자민원접수</a>
+                        <a href="#">보호금융상품등록부</a>
+                        <a href="#">상품공시실</a>
+                        <a href="#">경영공시</a>
+                        <a href="#">공지사항</a> 
                     </div>
                     <div class=footer-second-line>
                         <a href="#" id="first-line1">전자서명인증업무준칙</a>
