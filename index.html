@@ -8,11 +8,16 @@
             html, body {
                 margin:0;
                 padding: 0;
+                font-family: 'Yoon 윤고딕','돋움',dotum,sans-serif;
             }
             header {
                 display: flex;
-                position: relative;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 10;
                 height: 80px;
+                background-color: white;
                 border-bottom: 1px solid lightgray;
             }
             header > a > img:first-of-type { 
@@ -34,7 +39,7 @@
             ul :visited {
                 color: black; 
             }
-            ul,#footer-menu :hover {
+            ul :hover, #footer-menu :hover {
                 text-decoration: underline;
             }
             li { 
@@ -54,13 +59,19 @@
                 line-height: 48px;
                 text-align: center;
             }
+            body {
+                padding-top: 80px;
+            }
             .main-page1 {
                 position: relative;
-                height: 110vh;
-                background: url(./main-first-page-bg.png) no-repeat center;
+                height: 750px;
                 background-color: rgb(255, 237, 120);
-                background-size: contain;
-                background-position: 140px 20px;
+            }
+            #background {
+                position: relative;
+                height: 100vh;
+                background: url(./main-first-page-bg.png) no-repeat center;
+                background-size: cover;
             }
             #headline1 {
                 top: 135px;
@@ -115,7 +126,7 @@
                 color: black;
             }
             .main-page2 {
-                height: 860.05px;
+                height: 975px;
             }
             .main-page2-left {
                 position: absolute;
@@ -163,7 +174,7 @@
                 margin-bottom: 2px;
              }
              footer { 
-                width: 1083px;
+                min-width: 1083px;
                 height: 165px;
                 padding: 20px 200px;
                 background-color: rgb(241, 241, 241);
@@ -181,7 +192,7 @@
                 flex-wrap: wrap;
                 line-height: 30px;
                 margin-right: 10px;
-                font-size: 0.85rem;
+                font-size: 12px;
                 color: gray;
              }
              .footer-first-line > a:nth-of-type(n+2)::before, .footer-second-line > a:nth-of-type(n+2)::before {
@@ -207,7 +218,7 @@
              }
              #footer-information {
                 display: flex;
-                font-size: 0.85rem;
+                font-size: 12px;
                 color: gray;
                 margin-bottom: 10px;
              }
@@ -240,10 +251,10 @@
                 line-height: 50px;
              }
              #footer-link-box1 { 
-                left: 185px;
+                left: 175px;
              }
              #footer-link-box2 {
-                left: 370px;
+                left: 340px;
              }
             .footer-link-img1 {
                 width: 50px;
@@ -256,7 +267,7 @@
                 padding-right: 10px;
             }
             #footer-link-box1 > a, #footer-link-box2 > a {
-                font-size: 0.9rem;
+                font-size: 12px;
                 font-weight: 600;
                 color: gray;
             }
@@ -291,6 +302,7 @@
             </header>
             <main>
                 <div class="main-page1">
+                    <div id="background">
                     <p class="headline" id="headline1">이미 모두의 은행<br>지금은 카카오뱅크</p>
                     <p class="text1">한 사람, 한 사람을 위해 시작한 은행이<br>
                         더 많은 사람들이 찾는 모두의 은행이 되었습니다.<br><br>
@@ -304,6 +316,7 @@
                         <img class="icon" src="./social_apple.png">
                         <a href=# class="Appicon">App Store</a>
                     </div>
+                </div>
                 </div>
                 <div class="main-page2">
                     <div class="main-page2-left"><img class="main-page2-left-img" src="https://www.kakaobank.com/static/images/web/renewal/main-withdrawal.png"></div>
