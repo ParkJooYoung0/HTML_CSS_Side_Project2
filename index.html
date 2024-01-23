@@ -6,17 +6,23 @@
         <title>카카오뱅크</title>
         <style>
             html, body {
+                box-sizing: border-box;
                 margin:0;
                 padding: 0;
                 font-family: 'Yoon 윤고딕','돋움',dotum,sans-serif;
             }
+            .wrap {
+                width: 100%;
+                height: 100%;
+            }
             header {
                 display: flex;
                 position: fixed;
+                justify-content: space-between;
                 top: 0;
                 width: 100%;
                 z-index: 10;
-                height: 80px;
+                height: 81px;
                 background-color: white;
                 border-bottom: 1px solid lightgray;
             }
@@ -26,11 +32,10 @@
                 left: 180px;
             }
             ul { 
-                position: absolute;
                 display: flex;
-                right: 200px;
-                align-items: center;
-                justify-content: center;
+                width: 100%;
+                align-items: center;  
+                margin-right: 150px;
             }
             ul :link {
                 color: black;
@@ -64,34 +69,42 @@
             }
             .main-page1 {
                 position: relative;
-                height: 750px;
-                background-color: rgb(255, 237, 120);
+                width: 100%;
+                height: 720px;
+                background-color: #ffef6b;
+                margin: 0;
+                padding: 0;
             }
             #background {
                 position: relative;
-                height: 100vh;
+                width: 1200px;
+                height: 884px;
                 background: url(./main-first-page-bg.png) no-repeat center;
                 background-size: cover;
+                z-index: 1;
+                margin: auto;
             }
             #headline1 {
                 top: 135px;
-                left: 215px;
+                left: 50px;
                 font-size: 3.2rem;
             }
             .headline {
                 position: absolute;
+                width: 100%;
                 font-weight: bold;
                 margin: 0;  
             }
             .text1, .text2 {
                 position: absolute;
+                width: 100%;
                 line-height: 30px;
                 font-size: 1.1em;
                 margin: 0;
             }
             .text1 {
                 top: 280px;
-                left: 215px;
+                left: 50px;
             }
             #google, #apple {
                 position: absolute;
@@ -112,11 +125,11 @@
             }
             #google {
                 top: 474px;
-                left: 215px;
+                left: 50px;
             }
             #apple { 
                 top: 474px;
-                left: 410px;
+                left: 240px;
             }
             .Appicon:link {
                 color: black;
@@ -141,14 +154,15 @@
             }
             #headline2 {
                 top: 1220px;
-                right: 270px;
+                left: 845px;
                 font-size: 2.5em;
             }
             .text2 {
                 top: 1340px;
-                right: 218px;
+                left: 845px;
              }
              #main-page2-buttonbox { 
+                display: block;
                 position: absolute;
                 width: 276px;
                 height: 51px;
