@@ -16,31 +16,31 @@
                 height: auto;
             }
             header {
-                display: flex;
+                width: 1200px;
                 position: fixed;
-                justify-content: space-between;
                 top: 0;
-                width: 100%;
                 z-index: 10;
                 height: 81px;
                 background-color: white;
                 border-bottom: 1px solid lightgray;
             }
-            header > a > img:first-of-type { 
+            .header_logo {
                 position: absolute;
+                width: 300px;
                 top: 28px;
                 left: 180px;
             }
             nav {
-                position: absolute;
                 width: 820px;
-                left: 635px;
             }
-            .header_nav { 
-                display: flex;
-                align-items: center;  
-                margin-right: 150px;
-                width: 100%;
+            .header_nav {  
+                position: absolute;
+                align-items: center;
+                width: 700px;
+                height: 82px;
+                left: 225px;
+                margin: 0;
+                padding: 0;
             }
             ul :link {
                 color: black;
@@ -90,24 +90,16 @@
                 margin: auto;
             }
             #headline1 {
-                top: 135px;
+                position: absolute;
+                font-weight: bold;
+                top: 110px;
                 left: 50px;
                 font-size: 3.2rem;
             }
-            .headline {
-                position: absolute;
-                width: 100%;
-                font-weight: bold;
-                margin: 0;  
-            }
-            .text1, .text2 {
-                position: absolute;
-                width: 100%;
-                line-height: 30px;
-                font-size: 1.1em;
-                margin: 0;
-            }
             .text1 {
+                position: absolute;
+                font-size: 17px;
+                line-height: 1.65;
                 top: 280px;
                 left: 50px;
             }
@@ -144,36 +136,43 @@
                 color: black;
             }
             .main-page2 {
-                width: 1080px;
+                position: relative;
+                width: 100%;
                 height: 975px;
             }
-            .main-page2-left {
-                position: absolute;
-                width:473px;
-                height: 680px;
-                top: 1030px;
-                left: 200px;
-            }
             .main-page2-left-img {
-                width:100%;
-                height: 100%;
+                position: absolute;
+                width: 473px;
+                height: 678px;
+                top: 180px;
+                left: 50%;
+                margin-left: -500px;
+            }
+            .main-page2-text {
+                position: absolute;
+                top: 325px;
+                left: 50%;
+                margin-left: 90px;
             }
             #headline2 {
-                top: 1220px;
-                left: 830px;
+                font-weight: bold;
                 font-size: 2.5em;
             }
             .text2 {
-                top: 1340px;
-                left: 830px;
+                font-size: 17px;
+                line-height: 1.65;
+                margin-top: 30px;
              }
              #main-page2-buttonbox { 
-                display: block;
                 position: absolute;
-                width: 276px;
+                top: 585px;
+                left: 50%;
+                margin-left: 90px;
+             }
+             #main-page2-button {
+                display: block;
+                width: 260px;
                 height: 51px;
-                top: 1440px;
-                left: 830px;
                 border-radius: 9px;
                 background-color: rgb(241, 241, 241);
                 text-align: center;
@@ -190,12 +189,13 @@
              #main-page2-button-img {
                 width: 6px;
                 height: 9px;
-                margin-left: 5px;
-                margin-bottom: 2px;
+                margin: 5.5px 0 0 8px;
+                vertical-align: text-top;
              }
              footer { 
-                min-width: 1083px;
-                height: 165px;
+                position: relative;
+                min-width: 1200px;
+                height: 200px;
                 background-color: rgb(241, 241, 241);
              }
              .footer_inner {
@@ -212,12 +212,15 @@
                 text-decoration: none;
                 color: gray;
              }
+             .footer-first-line {
+                padding-top : 20px;
+             }
              .footer-first-line, .footer-second-line {
                 display: flex;
                 flex-wrap: wrap;
                 line-height: 30px;
                 margin-right: 10px;
-                font-size: 12px;
+                font-size: 13px;
                 color: gray;
              }
              .footer-first-line > a:nth-of-type(n+2)::before, .footer-second-line > a:nth-of-type(n+2)::before {
@@ -243,7 +246,7 @@
              }
              #footer-information {
                 display: flex;
-                font-size: 12px;
+                font-size: 13px;
                 color: gray;
                 margin-bottom: 10px;
              }
@@ -282,46 +285,53 @@
             .footer-link-img1 {
                 width: 50px;
                 height: 30px;
-                padding-right: 10px;
+                padding-right: 5px;
+                vertical-align: middle;
             }
             .footer-link-img2 {
                 width: 40px;
                 height: 40px;
-                padding-right: 10px;
+                padding-right: 5px;
+                vertical-align: middle;
             }
-            #footer-link-box1 > a, #footer-link-box2 > a {
-                font-size: 12px;
+            .footer-icon-text {
+                font-size: 13px;
                 font-weight: 600;
                 color: gray;
             }
             .icons {
-                position: absolute;
-                display: flex;
-                right: 300px;
+                float: right;
+                margin-right: 70px;
+            }
+            .icons li {
+                margin: 0;
             }
             #FB, #instagram, #youtube {
                 width: 20px;
                 height: 20px;
-                padding-left: 10px;
             }
         </style>
     </head>
     <body>
         <div class="wrap">
             <header>
-                    <a href="https://www.kakaobank.com/">
-                        <img src="https://www.kakaobank.com/static/images/web/logo_black.svg" class="header-logo">
-                    </a>
-                <nav>
-                    <ul class="header_nav">
-                        <li><a href="#">은행소개</a></li>
-                        <li><a href="#">IR투자정보</a></li>
-                        <li><a href="#">상품안내</a></li>
-                        <li><a href="#">고객센터</a></li>
-                        <li><div id="list5"><a href="#">서류제출하기</a></div></li>
-                        <li><a href="#" id="header-lang"><img src="https://www.kakaobank.com/static/images/web/icon_eng.svg"></a></li>
-                    </ul>
-                </nav>
+                <div class="header_logo">
+                        <a class="header-logo" href="https://www.kakaobank.com/">
+                            <img src="https://www.kakaobank.com/static/images/web/logo_black.svg">
+                        </a>
+                </div>
+                <div class="header_nav">
+                    <nav>
+                        <ul class="header_nav">
+                            <li><a href="#">은행소개</a></li>
+                            <li><a href="#">IR투자정보</a></li>
+                            <li><a href="#">상품안내</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><div id="list5"><a href="#">서류제출하기</a></div></li>
+                            <li><a href="#" id="header-lang"><img src="https://www.kakaobank.com/static/images/web/icon_eng.svg"></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
             <main>
@@ -343,16 +353,17 @@
                 </div>
                 </div>
                 <div class="main-page2">
-                    <div class="main-page2-left"><img class="main-page2-left-img" src="https://www.kakaobank.com/static/images/web/renewal/main-withdrawal.png"></div>
-                    <div class="main-page2-right">
+                    <div class="main-page2-left">
+                        <img class="main-page2-left-img" src="https://www.kakaobank.com/static/images/web/renewal/main-withdrawal.png">
+                        <div class="main-page2-text">
                         <p class="headline" id="headline2">모바일로 더 손쉬운<br>계좌개설, 간편한 이체</p>
                         <p class="text2">인증서, OTP 없이 계좌 개설이 간편합니다.<br>
                             여러 건의 이체도 몇 번의 터치로 손쉽게 보낼 수 있습니다.</p>
+                        </div>
                             <div id="main-page2-buttonbox">
-                                <a href="#" id="main-page2-button"> 카카오뱅크 입출금통장</a>
-                                <img id="main-page2-button-img" src="https://www.kakaobank.com/static/images/web/home_arr.png">
+                                <a href="#" id="main-page2-button"> 카카오뱅크 입출금통장  <img id="main-page2-button-img" src="https://www.kakaobank.com/static/images/web/home_arr.png"></a>
                             </div>
-                    </div>
+                </div>
                 </div>
             </main>
 
@@ -387,8 +398,14 @@
                     </div>
                 </div>
                 <div id="footer_icons">
-                     <a class="footer-link" href="#"> <img class="footer-link-img1" src="https://www.kakaobank.com/static/images/web/footer/webaccessibility.png">웹 접근성 품질인증</a>
-                     <a class="footer-link" href="#"> <img class="footer-link-img2" src="https://www.kakaobank.com/static/images/web/footer/web_trust_seal.png">웹 트러스트 인증</a>
+                     <a class="footer-link" href="#">
+                        <img class="footer-link-img1" src="https://www.kakaobank.com/static/images/web/footer/webaccessibility.png">
+                        <span class="footer-icon-text">웹 접근성 품질인증</span>
+                    </a>
+                     <a class="footer-link" href="#"> 
+                        <img class="footer-link-img2" src="https://www.kakaobank.com/static/images/web/footer/web_trust_seal.png">
+                        <span class="footer-icon-text">웹 트러스트 인증</span>
+                    </a>
                      <ul class="icons">
                         <li><a><img  id="FB" src="./FB_png.png"></a></li>
                         <li> <a><img id="instagram" src="./INSTAGRAM_png.png"></a></li>
